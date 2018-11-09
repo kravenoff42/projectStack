@@ -2,15 +2,18 @@ let urls;
 let request = new XMLHttpRequest();
 // request.setRequestHeader();
 // Open a new connection, using the GET request on the URL endpoint
-request.open('GET', 'https://www.joncraven.com/MealMaker/projectInfo.json', true);
+request.open('GET', 'https://www.joncraven.com/MealMaker/outline.md', true);
 
 
 request.onload = function () {
   console.log(this.response);
   let list = document.getElementById('list');
-  let data = JSON.parse(this.response);
+  let data = this.response;
+  // let data = JSON.parse(this.response);
   console.log(data);
-  data.forEach(repo => {
+  list.appendChild(data);
+
+  // data.forEach(repo => {
     // let h1 = document.createElement('h1');
     // h1.innerHTML = repo.name;
     // list.appendChild(h1);
@@ -24,11 +27,10 @@ request.onload = function () {
     // let desc = document.createElement('p');
     // desc.innerHTML = repo.description;
     // list.appendChild(desc);
-    let info = document.createElement('p');
-    info.innerHTML = repo.status;
-    list.appendChild(desc);
-
-  });
+  //   let info = document.createElement('p');
+  //   info.innerHTML = repo.status;
+  //   list.appendChild(desc);
+  // });
   // list.innerHTML = JSON.stringify(this.response);
 }
 
