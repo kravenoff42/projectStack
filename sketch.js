@@ -2,7 +2,7 @@ let urls;
 let request = new XMLHttpRequest();
 // request.setRequestHeader();
 // Open a new connection, using the GET request on the URL endpoint
-request.open('GET', 'https://github.com/kravenoff42/MealMaker/projectInfo.json', true);
+request.open('GET', 'https://joncraven.com/MealMaker/projectInfo.json', true);
 
 
 request.onload = function () {
