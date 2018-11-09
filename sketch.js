@@ -10,8 +10,15 @@ request.onload = function () {
   let list = document.getElementById('list');
   let data = this.response;
   // let data = JSON.parse(this.response);
-  console.log(data);
-  list.appendChild(data);
+  // console.log(data);
+  if(data.split("/r")[0].incudes("[](completed)")){
+    console.log("Completed");
+    let info = document.createElement('p');
+    info.innerHTML = data;
+    list.appendChild(info);
+  }else{
+    console.log("Something went wrong");
+  }
 
   // data.forEach(repo => {
     // let h1 = document.createElement('h1');
