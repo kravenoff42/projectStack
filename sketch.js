@@ -6,12 +6,14 @@ request.open('GET', 'https://www.joncraven.com/MealMaker/outline.md', true);
 
 
 request.onload = function () {
-  console.log(this.response);
+  // console.log(this.response);
   let list = document.getElementById('list');
   let data = this.response;
   // let data = JSON.parse(this.response);
-  // console.log(data);
-  if(data.split("/r")[0].incudes("[](completed)")){
+  let arr = data.split("\n");
+  let first = arr[0];
+  let completed = first == "[](completed)";
+  if(completed){
     console.log("Completed");
     let info = document.createElement('p');
     info.innerHTML = data;

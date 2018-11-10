@@ -75,6 +75,10 @@ The Checklist:
 
 1 week
 
+> **Due Date?**
+
+2018-01-01
+
 ## Bonus Points
 > **What might get added if at all possible?**
 
